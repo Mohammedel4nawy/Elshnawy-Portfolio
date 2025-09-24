@@ -1,0 +1,284 @@
+*{
+  padding: 0;
+  margin: 0;
+
+}
+:root{
+    --color-1 :#1B1B1B;
+    --color-2 :#2E2E2E;
+    --color-3 :#F5F5F5;
+    --color-4 :#ffd428; 
+    --color-5 :#00A878; 
+    --padding : ;
+}
+
+
+body{
+  background-color: var(--color-1);
+  margin: 0;
+  padding: 0;
+}
+
+/* start nav bar  */
+nav{
+  z-index: 1000;
+
+}
+
+/* end nav bar  */
+
+
+/* start side bar  */
+.nav-container{
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+}
+.side-bar{
+  background-color: var(--color-3);
+  border-radius: 0 10px 10px 0;
+  z-index: -10;
+}
+.side-bar a {
+  background-color: var(--color-3);
+  color: var(--color-1);
+  text-transform: capitalize;
+  position: relative;
+  border-radius: 3px;
+  border: 2px solid var(--color-1);
+}
+.side-bar a::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: -4px;
+  bottom: -3px;
+  background-color: var(--color-1);
+  border: 1px solid var(--color-1);
+  z-index: -1;
+  transition: .2s;
+  border-radius: 3px;
+}
+.side-bar a:hover::after{
+transform: translate(4px,3px);
+}
+.social-media{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+.social-media a{
+aspect-ratio: 1/1;
+font-size: 16px;
+font-weight: bolder;
+padding: 10px;
+border-radius: 50%;
+}
+.social-media a::after{
+  border-radius: 50%;
+}
+
+/* end side bar  */
+
+.card-container {
+  aspect-ratio: 3 / 2;
+  border: 4px solid;
+  background-color: #fff;
+  position: relative;
+  transition: 0.15s ease;
+  padding: 5% 5% 15% 5%;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 4px solid;
+    background-color: #fff;
+    transform-origin: center center;
+    z-index: -1;
+    transition: 0.15s ease;
+    top: 0;
+    left: 0;
+  }
+
+  &:before {
+    transform: translatey(-2%) rotate(-6deg);
+  }
+
+  &:after {
+    transform: translatey(2%) rotate(6deg);
+  }
+}
+.card-container-small{
+  aspect-ratio: 3 / 2;
+  border: 4px solid;
+  background-color: #fff;
+  position: relative;
+  transition: 0.15s ease;
+  padding: 5% 5% 15% 5%;
+  box-shadow: 4px 4px black;
+}
+/* From Uiverse.io by janisar-hyder */ 
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.stack {
+  transition: 0.25s ease;
+  &:hover {
+    transform: rotate(5deg);
+    .card:before {
+      transform: translatey(-2%) rotate(-4deg);
+    }
+    .card:after {
+      transform: translatey(2%) rotate(4deg);
+    }
+  }
+}
+
+.card {
+  aspect-ratio: 3 / 2;
+  border: 4px solid;
+  background-color: #fff;
+  position: relative;
+  transition: 0.15s ease;
+  cursor: pointer;
+  padding: 5% 5% 15% 5%;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 4px solid;
+    background-color: #fff;
+    transform-origin: center center;
+    z-index: -1;
+    transition: 0.15s ease;
+    top: 0;
+    left: 0;
+  }
+
+  &:before {
+    transform: translatey(-2%) rotate(-6deg);
+  }
+
+  &:after {
+    transform: translatey(2%) rotate(6deg);
+  }
+}
+.image {
+  width: 100%;
+  border: 4px solid;
+  background-color: #eee;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.browser-warning {
+  margin-bottom: 4rem;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .browser-warning {
+    display: none;
+  }
+}
+
+/* skill section */
+
+.skill-card {
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  --main-focus: #2d8cf0;
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.skill-card:hover{
+  transform: translateY(-3%);
+  transition: all .5s;
+}
+.skill-card:last-child {
+  justify-content: flex-end;
+}
+
+
+.skill-card .card-img {
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+}
+
+.skill-card .card-img .img {
+  transform: scale(1);
+  position: relative;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  
+}
+
+
+.skill-card .card-title {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--font-color);
+}
+
+.skill-card .card-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--font-color-sub);
+}
+
+.card-divider {
+  width: 100%;
+  border: 1px solid var(--main-color);
+  border-radius: 50px;
+}
+
+.skill-card .card-img:hover {
+  transform: translateY(-3px);
+}
+
+/* start service section  */
+.service-box {
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  --main-focus: #2d8cf0;
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 40px;
+  padding: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.service-box:hover{
+  transform: translateY(-3%);
+  transition: all .5s;
+}
