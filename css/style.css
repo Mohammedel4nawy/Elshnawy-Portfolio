@@ -36,7 +36,7 @@ body{
 .brand-name {
     font-family: 'Cinzel', serif;
     color: #f0e6d2;
-    font-size: 7rem;
+    font-size: 8vw;
     letter-spacing: 4px;
     animation: fadeInDown 1.8s ease-in-out;
     text-transform: uppercase;
