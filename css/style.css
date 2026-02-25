@@ -19,7 +19,13 @@ body{
   padding: 0;
 }
 
+/* start nav bar  */
+nav{
+  z-index: 1000;
 
+}
+
+/* end nav bar  */
 
 /* start intro section  */
 .intro-section {
@@ -72,31 +78,6 @@ body{
         transform: translateY(0);
     }
 }
-
-.main-section {
-    min-height: 100vh;
-    background-image: url(../img/wooden-clothes-hangers-cling-emptily-to-the-shiny-shop-rack.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding-top: 80px;
-}
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-/* end intro section  */
-
-
-/* start nav bar  */
-nav{
-  z-index: 1000;
-
-}
-
-/* end nav bar  */
-
 
 /* start side bar  */
 .nav-container{
