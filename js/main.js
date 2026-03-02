@@ -318,7 +318,8 @@ services.forEach(function (e, i) {
 
 services.forEach(function (e, i) {
     serviceContainerSmall.innerHTML += `
-            <div class="service-box d-flex flex-column " style = " z-index: ${i}; position : sticky ; top :0px ; ">
+        <div class="service-container col-md-4 p-2" style = " z-index: ${i}; position : sticky ; top :0px ; " >
+            <div class="service-box d-flex flex-column ">
                 <div class=" header">
                     <h4 class="text-capitalize text-center">${e.title}</h4>
                 </div>
@@ -329,7 +330,9 @@ services.forEach(function (e, i) {
                 </div>
                 <hr>
                 <a href="${e.link}" target="blank" class="btn btn-dark">Get Service</a>
-            </div>    `
+            </div>    
+        </div>
+            `
 })
 
 //---------------------------------------------------------------
